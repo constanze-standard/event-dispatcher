@@ -4,6 +4,8 @@
     "type": "library",
     "keywords": ["psr", "psr-14", "event", "event-dispacher", "dispatcher"],
     "license": "MIT",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
     "authors": [
         {
             "name": "Alex",
