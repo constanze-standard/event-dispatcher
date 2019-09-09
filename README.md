@@ -3,13 +3,13 @@
 [![GitHub license](https://img.shields.io/github/license/alienwow/SnowLeopard.svg)](https://github.com/constanze-standard/event-dispatcher/blob/master/LICENSE)
 [![Coverage 100%](https://img.shields.io/azure-devops/coverage/swellaby/opensource/25.svg)](https://github.com/constanze-standard/event-dispatcher)
 
-## 遵循 PSR-14 的事件与派发系统。
+## PSR-14 事件与派发与监听系统。
 An event dispatching system with PSR-14.
 
 ## 简介
-beige-event 是一个小型的 PHP 事件派发系统。它派发一个事件，并以优先级顺序调用预先定义的事件处理程序。
+event-dispatcher 是一个小型的 PHP 事件派发系统。它派发一个事件，并以优先级顺序调用预先定义的事件处理程序。
 
-beige-event 由以下5个概念构成：
+事件系统由以下5个概念构成：
 1. 事件 (Event): Event 是事件信息的载体，它往往围绕一个动作进行描述，例如 “用户被创建了”、“准备导出 excel 文件” 等等，Event 的内部需要包含当前事件的所有信息，以便后续的处理程序使用。
 2. 监听器 (Listener): Listener 是事件处理程序，负责在发生某一事件(Event)时执行特定的操作。
 3. Listener Provider: 它负责将事件(Event)与监听器(Listener)进行关联，在触发一个事件时，Listener Provider 需要提供绑定在该事件上的所有监听器。
@@ -18,7 +18,7 @@ beige-event 由以下5个概念构成：
 
 ## 安装
 ```bash
-composer require beige/event
+composer require constanze-standard/event-dispatcher
 ```
 
 ## 使用
