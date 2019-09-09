@@ -3,7 +3,7 @@
 [![GitHub license](https://img.shields.io/github/license/alienwow/SnowLeopard.svg)](https://github.com/constanze-standard/event-dispatcher/blob/master/LICENSE)
 [![Coverage 100%](https://img.shields.io/azure-devops/coverage/swellaby/opensource/25.svg)](https://github.com/constanze-standard/event-dispatcher)
 
-## PSR-14 事件与派发与监听系统。
+## PSR-14 事件派发与监听系统。
 An event dispatching system with PSR-14.
 
 ## 简介
