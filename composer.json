@@ -1,5 +1,5 @@
 {
-    "name": "constanze-standard/event",
+    "name": "constanze-standard/event-dispatcher",
     "description": "An event dispatching system with PSR-14.",
     "type": "library",
     "keywords": ["psr", "psr-14", "event", "event-dispacher", "dispatcher"],
