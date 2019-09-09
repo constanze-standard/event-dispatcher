@@ -1,0 +1,25 @@
+{
+    "name": "constanze-standard/event",
+    "description": "An event dispatching system with PSR-14.",
+    "type": "library",
+    "keywords": ["psr", "psr-14", "event", "event-dispacher", "dispatcher"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex",
+            "email": "blldxt@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "psr/event-dispatcher": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "6.5.14"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConstanzeStandard\\EventDispatcher\\": "src"
+        }
+    }
+}
