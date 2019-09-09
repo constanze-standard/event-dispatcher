@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the beige-event package.
+ * This file is part of the constanze-standard/event-dispatcher package.
  *
  * (c) Alex <blldxt@gmail.com>
  *

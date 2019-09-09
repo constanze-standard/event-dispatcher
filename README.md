@@ -1,6 +1,6 @@
-# beige-event
+# Constanze standard event dispatcher
 
-[![GitHub license](https://img.shields.io/github/license/alienwow/SnowLeopard.svg)](https://github.com/alienwow/SnowLeopard/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/alienwow/SnowLeopard.svg)](https://github.com/constanze-standard/event-dispatcher/blob/master/LICENSE)
 [![Coverage 100%](https://img.shields.io/azure-devops/coverage/swellaby/opensource/25.svg)](https://github.com/constanze-standard/event-dispatcher)
 
 ## 遵循 PSR-14 的事件与派发系统。
@@ -118,8 +118,7 @@ function onSomeEvent(EventInterface $event) {
 ```
 
 ### 定义 Listener Provider
-有了 listener 和 event 对象之后，需要将二者进行绑定，beige-event 提供了一个支持事件优先级的 `ConstanzeStandard\EventDispatcher\ListenerProvider`，你也可以定义自己的 Listener Provider，只要实现 `Psr\EventDispatcher\ListenerProviderInterface` 接口即可。
-
+Listener Provider 负责确定哪些 listener 与当前派发的事件相关，并将相关的 listener 提供给 dispatcher. 
 添加一个 Listener:
 ```php
 use ConstanzeStandard\EventDispatcher\ListenerProvider;
@@ -145,7 +144,7 @@ $dispatcher->dispatch($event);
 ### 使用订阅器
 我们之前利用 `ListenerProvider::addListener` 添加事件和监听器的关系，这种方式比较过程化，也无法体现出一组事件之间的关系，所以在实践中往往会提出“订阅器”的概念。
 
-beige-event 的订阅器(Subscriber)实际上是对 `ListenerProvider::addListener` 的一种装饰。使用订阅器需要实现 `ConstanzeStandard\EventDispatcher\Interfaces\SubscriberInterface` 接口:
+订阅器(Subscriber)实际上是对 `ListenerProvider::addListener` 的一种装饰。使用订阅器需要实现 `ConstanzeStandard\EventDispatcher\Interfaces\SubscriberInterface` 接口:
 ```php
 use ConstanzeStandard\EventDispatcher\Interfaces\EventInterface;
 use ConstanzeStandard\EventDispatcher\Interfaces\SubscriberInterface;
