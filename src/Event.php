@@ -46,9 +46,9 @@ class Event implements EventInterface, StoppableEventInterface
     /**
      * Get a new event with stopped signal.
      * 
-     * @return Event
+     * @return StoppableEventInterface
      */
-    public function withPropagationStopped()
+    public function withPropagationStopped(): StoppableEventInterface
     {
         $event = clone $this;
         $event->propagationStopped(true);

@@ -11,6 +11,8 @@
 
 namespace ConstanzeStandard\EventDispatcher\Interfaces;
 
+use Psr\EventDispatcher\StoppableEventInterface;
+
 interface EventInterface
 {
     /**
@@ -19,4 +21,11 @@ interface EventInterface
      * @return string
      */
     public function getName(): string;
+
+    /**
+     * Get a new event with stopped signal.
+     * 
+     * @return StoppableEventInterface
+     */
+    public function withPropagationStopped(): StoppableEventInterface;
 }
